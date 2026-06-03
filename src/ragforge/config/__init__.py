@@ -1,5 +1,5 @@
 """Expose unified settings object instance across services."""
 
-from src.config.environment import Settings
+from ragforge.config.environment import Settings
 
 settings = Settings()
