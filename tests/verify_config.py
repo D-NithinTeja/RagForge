@@ -24,7 +24,11 @@
 
 import logging
 
-from ragforge.core.exceptions import AppError, DocumentNotFound, FileValidationError
+from ragforge.core.exceptions import (
+    AppError,
+    DocumentNotFoundError,
+    FileValidationError,
+)
 from ragforge.core.logger import setup_logging
 
 setup_logging()
@@ -34,7 +38,7 @@ logger = logging.getLogger("RAGForge.TESTING.Exceptions")
 def simulate_pipeline_operation(action_code: int):
     doc_id = 2
     if action_code == 1:
-        raise DocumentNotFound()
+        raise DocumentNotFoundError()
     elif action_code == 2:
         raise FileValidationError(f"File {doc_id} exceeds 50MB")
     else:

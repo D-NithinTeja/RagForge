@@ -103,7 +103,7 @@ def init_db() -> None:
     """Create physical table mapped across models."""
 
     Base.metadata.create_all(bind=engine)
-    _apply_migration()
+    _apply_migrations()
     logger.info("Database structural verification complete.")
 
 

@@ -2,7 +2,7 @@
 
 from typing import Final
 
-ALLOWED_CONTENT_TYPE: Final[frozenset[str]] = frozenset(
+ALLOWED_CONTENT_TYPES: Final[frozenset[str]] = frozenset(
     {
         "application/pdf",
         "text/plain",

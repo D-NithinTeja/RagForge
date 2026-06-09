@@ -14,12 +14,12 @@ class AppError(Exception):
         super().__init__(self.message)
 
 
-class StorageFileNotFound(AppError):
+class StorageFileNotFoundError(AppError):
     status_code: int = status.HTTP_404_NOT_FOUND
     default_message: str = "Requested file asset could not be located"
 
 
-class DocumentNotFound(AppError):
+class DocumentNotFoundError(AppError):
     status_code: int = status.HTTP_404_NOT_FOUND
     default_message: str = "Document index record not found"
 
