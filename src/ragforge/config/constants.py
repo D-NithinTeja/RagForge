@@ -28,6 +28,7 @@ SUMMARIZATION_TEMPERATURE: float = 0.3  # Deterministic for structural accuracy
 QA_TEMPERATURE: float = 0.5  # Slightly balanced creativity for response styling
 VISION_TEMPERATURE: float = 0.4
 LLM_MAX_RETRIES: int = 1  # Increase it to 3 or more in production
+DEFAULT_MAX_CONCURRENCY: int = 1
 
 # File Streaming and IO optimization boundaries
 FILE_WRITE_CHUNK_SIZE: int = 1024 * 1024  # 1 MB blocks

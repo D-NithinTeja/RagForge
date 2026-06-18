@@ -4,8 +4,8 @@ import pytest
 from fastapi import UploadFile
 from starlette.datastructures import Headers
 
+from ragforge.services.file_service import file_service
 from src.ragforge.core.exceptions import FileValidationError
-from src.ragforge.services.file_servies import file_service
 
 
 def test_file_upload_validation_and_streaming_lifecycle():
