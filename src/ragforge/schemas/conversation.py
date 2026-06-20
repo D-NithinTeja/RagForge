@@ -1,0 +1,30 @@
+from datetime import datetime
+from typing import Optional
+
+from pydantic import BaseModel, Field
+
+from src.ragforge.config.constants import MAX_QUESTION_LENGTH
+
+
+class CreateConversationRequest(BaseModel):
+    title: Optional[str] = None
+
+
+class ChatRequest(BaseModel):
+    question: str = Field(..., min_length=1, max_length=MAX_QUESTION_LENGTH)
+    doc_ids: list[str] | None = None
+
+
+class ConversationResponse(BaseModel):
+    id: str
+    title: Optional[str]
+    created_at: str
+
+
+class RenameConversationRequest(BaseModel):
+    title: str = Field(..., min_length=1, max_length=200)
+
+
+class DeleteConversationResponse(BaseModel):
+    message: str
+    id: str
