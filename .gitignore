@@ -16,3 +16,4 @@ wheels/
 chroma_db
 *.db-shm
 *.db-wal
+uploads/

@@ -23,7 +23,7 @@ DEFAULT_NEW_AFTER_N_CHARS: int = 2000  # Soft limit
 DEFAULT_IMAGE_TYPES: list[str] = ["Image"]
 
 # Large Language Model Runtime parameters
-VISION_MODEL: str = "qwen3-vl:8b"
+VISION_MODEL: str = "qwen3-vl:4b"
 SUMMARIZATION_TEMPERATURE: float = 0.3  # Deterministic for structural accuracy
 QA_TEMPERATURE: float = 0.5  # Slightly balanced creativity for response styling
 VISION_TEMPERATURE: float = 0.4
